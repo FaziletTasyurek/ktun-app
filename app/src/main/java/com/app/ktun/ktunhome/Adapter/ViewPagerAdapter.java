@@ -1,19 +1,23 @@
 package com.app.ktun.ktunhome.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.android.volley.toolbox.ImageLoader;
+import com.app.ktun.ktunhome.Model.Duyuru;
 import com.app.ktun.ktunhome.Model.Slider;
 import com.app.ktun.ktunhome.R;
+import com.app.ktun.ktunhome.Service.Duyuru_ac;
 import com.app.ktun.ktunhome.Service.VolleyRequest;
 
 import java.util.List;
@@ -27,10 +31,10 @@ public class ViewPagerAdapter extends PagerAdapter {
     private ImageLoader imageLoader;
 
 
-
     public ViewPagerAdapter(List sliderImg, Context context) {
         this.sliderImg = sliderImg;
         this.context = context;
+
     }
 
     @Override
@@ -71,15 +75,11 @@ public class ViewPagerAdapter extends PagerAdapter {
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+Intent ıntent=new Intent(context.getApplicationContext(),Duyuru_ac.class);
 
-                if (position == 0) {
-                    Toast.makeText(context, "Slide 1 Clicked", Toast.LENGTH_SHORT).show();
-                } else if (position == 1) {
-                    Toast.makeText(context, "Slide 2 Clicked", Toast.LENGTH_SHORT).show();
-                } else {
-                    Toast.makeText(context, "Slide 3 Clicked", Toast.LENGTH_SHORT).show();
-                }
-
+                Log.d("amcaoğlu", String.valueOf(sliderImg.get(position).getID()));
+                ıntent.putExtra("baslık",String.valueOf(sliderImg.get(position).getID()));
+                context.startActivity(ıntent);
             }
         });
 

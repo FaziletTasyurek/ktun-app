@@ -1,9 +1,12 @@
 package com.app.ktun.ktunhome.Fragments;
 
+import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
@@ -54,6 +57,7 @@ public class homeFragment extends Fragment {
     TextView slider_date;
 
     String request_url = "http://ktun.edu.tr/apimobile/Duyurulistesi";
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -165,9 +169,11 @@ public class homeFragment extends Fragment {
 
                     sliderImg.add(sliderUtils);
 
+
                 }
 
-                viewPagerAdapter = new ViewPagerAdapter(sliderImg, getActivity());
+
+                viewPagerAdapter = new ViewPagerAdapter(sliderImg,getActivity());
 
                 viewPager.setAdapter(viewPagerAdapter);
 
@@ -222,6 +228,7 @@ public class homeFragment extends Fragment {
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
         fragment.setArguments(args);
+
         return fragment;
     }
 

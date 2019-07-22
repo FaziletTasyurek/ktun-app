@@ -1,6 +1,5 @@
 package com.app.ktun.ktunhome;
 
-import android.app.Activity;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.BottomNavigationView;
@@ -24,9 +23,6 @@ import com.app.ktun.ktunhome.Fragments.homeFragment;
 import com.app.ktun.ktunhome.Fragments.loginFragment;
 
 
-
-
-
 public class MainActivity extends AppCompatActivity
         implements OnNavigationItemSelectedListener, NavigationView.OnNavigationItemSelectedListener, View.OnClickListener, loginFragment.OnFragmentInteractionListener, homeFragment.OnFragmentInteractionListener, graduateFragment.OnFragmentInteractionListener {
        TextView duyuru;
@@ -47,8 +43,11 @@ public class MainActivity extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
+
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+
     }
 
     @Override
@@ -133,7 +132,6 @@ public class MainActivity extends AppCompatActivity
     public void onFragmentInteraction(Uri uri) {
 
     }
-
 
     @Override
     public void onClick(View v) {
