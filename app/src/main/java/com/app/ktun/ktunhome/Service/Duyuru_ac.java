@@ -168,6 +168,7 @@ sendRequest();
         }
         if (letter == 196 && letterInc == 167) {
             html += "ç";
+
         }
 
     }
