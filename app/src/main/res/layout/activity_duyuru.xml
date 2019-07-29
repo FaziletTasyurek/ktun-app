@@ -6,22 +6,109 @@
     android:layout_height="match_parent"
     tools:context=".Service.Duyuru_ac">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/baslık"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:orientation="vertical" >
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="TextView" />
-    </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TableLayout
+                    android:layout_width="254dp"
+                    android:layout_height="157dp">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/duyuruu"
+                                android:layout_width="256dp"
+                                android:layout_height="wrap_content"
+                                android:text="Duyuru"
+                                android:textSize="30dp" />
+
+                            <TextView
+                                android:id="@+id/baslık"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="başlık"
+                                android:textSize="20sp" />
+                        </LinearLayout>
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/Duyuru_tarih"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Duyuru tarih"
+                                android:textSize="15sp" />
+                        </LinearLayout>
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </TableLayout>
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="151dp"
+                    android:layout_height="150dp"
+                    tools:src="@tools:sample/avatars" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="74dp"
+                    android:layout_height="29dp" />
+
+                <TextView
+                    android:id="@+id/metin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <WebView
+                    android:id="@+id/webview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
 
 </RelativeLayout>

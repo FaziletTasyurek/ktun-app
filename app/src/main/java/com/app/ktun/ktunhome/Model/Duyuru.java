@@ -9,7 +9,8 @@ public class Duyuru {
     String KAYITTARIHI;
     String FOTOPATH;
     String ANAHTARKELIMELER;
-
+    String KISAICERIK;
+    String ICERIK;
 
     public int getID() {
         return ID;
@@ -27,6 +28,21 @@ public class Duyuru {
         this.BASLIK = BASLIK;
     }
 
+    public String getKISAICERIK() {
+        return KISAICERIK;
+    }
+
+    public void setKISAICERIK(String KISAICERIK) {
+        this.KISAICERIK = KISAICERIK;
+    }
+
+    public String getICERIK() {
+        return ICERIK;
+    }
+
+    public void setICERIK(String ICERIK) {
+        this.ICERIK = ICERIK;
+    }
 
 
     public String getYAYINTARIHIBAS() {

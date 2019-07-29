@@ -77,7 +77,7 @@ public class ViewPagerAdapter extends PagerAdapter {
             public void onClick(View v) {
 Intent ıntent=new Intent(context.getApplicationContext(),Duyuru_ac.class);
 
-                Log.d("amcaoğlu", String.valueOf(sliderImg.get(position).getID()));
+
                 ıntent.putExtra("baslık",String.valueOf(sliderImg.get(position).getID()));
                 context.startActivity(ıntent);
             }
